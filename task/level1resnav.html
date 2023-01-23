@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+nav{
+    height: 70px;
+    background: #000;
+}
+nav .main{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+nav .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 50px;
+}
+nav .title{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+nav .download{
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 0px;
+    font-size: 12px;
+}
+nav .download ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 400ms;
+    letter-spacing: 0px;
+}
+nav .download ul li a:hover{
+    background-color: #b316c4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+nav .menu ul{
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 12px;
+}
+nav .menu ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+nav .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 400ms;
+    letter-spacing: 0px;
+}
+nav .menu ul li a:hover{
+    background-color: #b316c4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+label i{
+    color: #fff;
+    font-size: 25px;
+}
+#checking{
+    display: none;
+}
+label{
+    display: none;
+}
+nav .menu ul li.active a{
+    background-color: #b316c4;
+    color: #fff;
+}
+
+@media (max-width: 830px){
+    nav .menu ul{
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        background: #ebaceb;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    nav .menu ul li{
+        margin: 30px 0;
+    }
+    nav .menu ul li a{
+        font-size: 20px;
+    }
+    nav .menu ul li a:hover{
+        padding: 10px;
+        background: #6b0377;
+        color: #f3e7f5;
+        border: unset;
+        outline: unset;
+        border-radius: 20px;
+        font-weight: unset;
+    }
+    label{
+        display: block;
+    }
+    #checking:checked ~ ul{
+        left: 0%;
+    }
+    #checking:checked ~ label i::before{
+        content: '\f00d';
+    }
+}
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <title>resnavbar</title>
+        <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+    </head>
+    <body>
+        <nav>
+            <div class="main">
+                <div class="box">
+                    <div class="download">
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                <i class="material-icons" style="font-size: 15px; color:#fff">phone_iphone</i>
+                                Download Ot Fit App Here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="menu">
+                        <input type="checkbox" id="checking">
+                        <label for="checking">
+                            <i class="fa fa-bars" style="font-size: 15px; color:#fff"></i>
+                        </label>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="title">
+                <h1>OtFit</h1>
+            </div>
+        </nav>
+    </body>
+</html>

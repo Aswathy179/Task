@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background: #fff;
+    padding: 10px;
+}
+nav{
+    height: 70px;
+    background: #000;
+}
+nav .main{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+nav .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 50px;
+}
+nav .title{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+nav .download{
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 0px;
+    font-size: 12px;
+}
+nav .download ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 400ms;
+    letter-spacing: 0px;
+}
+nav .download ul li a:hover{
+    background-color: #b316c4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+nav .menu ul{
+    display: flex;
+    list-style-type: none;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size: 12px;
+}
+nav .menu ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+nav .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 400ms;
+    letter-spacing: 0px;
+}
+nav .menu ul li a:hover{
+    background-color: #b316c4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+label i{
+    color: #fff;
+    font-size: 25px;
+}
+#checking{
+    display: none;
+}
+label{
+    display: none;
+}
+nav .menu ul li.active a{
+    background-color: #b316c4;
+    color: #fff;
+}
+.headbox{
+    display: flex;
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff;
+    border-bottom: 4px solid rgb(107, 107, 107);
+
+}
+.headbox .headlogo{
+    font-size: 10px;
+    float: left;
+    margin-left: 100px;
+    margin-top: 27px;
+    transform:translate(-50%,-50%);
+
+}
+.headbox .vl1{
+    margin-left: 60px;
+    border-left: 4px solid rgb(107, 107, 107);
+    height: 50px;
+}
+.searchbar{
+    display: flex;
+    justify-content: space-betweens;
+    align-items: center;
+    margin-left: 28px;
+}
+.headbox .searchbar a{
+    color: #000;
+    padding :  10px;
+}
+
+.headbox .searchbar input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 5px;
+    border-radius: 12px;
+    border-color: #000;
+    border-width: 2px;
+}
+.headbox .searchbar input[type=text]:hover {
+  background: #ec7cf8;
+  border-radius: 20px;
+  border: #000 10px;
+}
+
+.headbox .iconbar {
+    width: 19%;
+    padding: 10px 0px 0px 10px;
+    margin-left: 58px;
+    height: 39px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-color: #000;
+    border-radius: 30px;
+}
+
+.headbox .iconbar a{
+  width: 1%;
+  padding: 20px;
+  transition: all 0.3s ease;
+  color: #000;
+  font-size: 17px;
+  position: center;
+  
+}
+
+.headbox .iconbar a:hover {
+  background-color: #ec7cf8;
+  transition: all 400ms;
+  border-radius: 20px;
+}
+.headbox .vl2{
+    margin-left: 141px;
+    border-right: 4px solid rgb(107, 107, 107);
+    height: 50px;
+}
+.headbox .user{
+    float: right;
+    margin-left: 170px;
+    margin-right: 40px;
+    margin-top: 27px;
+    transform:translate(-50%,-50%);
+}
+
+#grid-container {
+   
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   height: max-content;
+   width: max-content;
+   grid-template-areas: 
+     "main-image second third";
+   
+ }
+ 
+ #main-image {
+   grid-area: main-image;
+   width: 100%;
+   height: 100%;
+   grid-column: 1;
+   margin: 10px;
+   
+ }
+ 
+ 
+ .grid-cell{
+   padding: 0;
+   margin-top: 10px;
+ }
+ .image-list{
+   list-style-type: none;
+  padding-left: 0;
+   text-decoration: none;
+ }
+
+ .image {
+   height: 288px;
+   width: 508px;
+   object-fit: cover;
+ }
+ .image1{
+    height: 580px;
+    width: 811px;
+ }
+
+
+.footer {
+  background-color: rgb(207, 203, 203);
+  padding: 60px 0 20px;
+  margin-top: 112px;
+}
+.footer p {
+	color: #8a8a8a;
+}
+.footer-col-1,
+  .footer-col-2,
+  .footer-col-3,
+  .footer-col-4,
+  .footer-col-5 {
+	min-width: 250px;
+	margin-bottom: 20px;
+  }
+  
+  .footer-col-1 {
+	flex-basis: 30%;
+  }
+  
+  .footer-col-2,
+  .footer-col-3,
+  .footer-col-4,
+  .footer-col-5 {
+	flex-basis: 10%;
+	text-align: center;
+  }
+
+.footer .footer-col-1 p{
+  margin-bottom: 32px;
+  color: #4f5665;
+  font-size: 12px;
+}
+
+.footer  a{
+  font-size: 12px;
+  padding: 8px;
+  margin-bottom: 16px;
+  color: #4f5665;
+}
+.footer h4{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: .40px;
+}
+.footer hr {
+	border: none;
+	background: #b5b5b5;
+	height: 1px;
+	margin: 20px 0;
+  }
+.footer .last p{
+    color: #5a5c5f;
+    font-size: 10px;
+}
+    
+
+@media only screen and (max-width: 600px) {
+	.row {
+	  text-align: center;
+	}
+	.col-2,
+	.col-3,
+	.col-4 {
+	  flex-basis: 100%;
+	}
+  
+	.single-product .row {
+	  text-align: left;
+	}
+}
+
+
+
+
+@media (max-width: 830px){
+    nav .menu ul{
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        background: #ebaceb;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    nav .menu ul li{
+        margin: 30px 0;
+    }
+    nav .menu ul li a{
+        font-size: 20px;
+    }
+    nav .menu ul li a:hover{
+        padding: 10px;
+        background: #6b0377;
+        color: #f3e7f5;
+        border: unset;
+        outline: unset;
+        border-radius: 20px;
+        font-weight: unset;
+    }
+    label{
+        display: block;
+    }
+    #checking:checked ~ ul{
+        left: 0%;
+    }
+    #checking:checked ~ label i::before{
+        content: '\f00d';
+    }
+}
+
+    </style>
+
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>OtFit</title>
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+  </head>
+  <body>
+    <!-- ====== Header ====== -->
+    <header class="header">
+        <!-- ====== Navigation ====== -->
+        <nav>
+            <div class="main">
+                <div class="box">
+                    <div class="download">
+                        <ul>
+
+                            <li>
+                                <a href="#">
+                                <i class="material-icons" style="font-size: 15px; color:#fff">phone_iphone</i>
+                                Download Ot Fit App Here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="menu">
+                        <input type="checkbox" id="checking">
+                        <label for="checking">
+                            <i class="fa fa-bars" style="font-size: 15px; color:#fff"></i>
+                        </label>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+            
+        
+        <div class="headbox">
+            <div class="headlogo">
+                <h1>OtFit</h1>
+            </div>
+            <div class="vl1"></div>
+            <div class="searchbar">
+                <a href="#"><i class="fa fa-fw fa-search"></i>
+                <input type="text" placeholder="Search.." name="search">
+                </a>
+            </div>
+            <div class="iconbar">
+                <a href="#"><i class="material-icons" style="font-size:16px;color:#000">message</i></a> 
+                <a href="#"><i class='fa fa-shopping-bag' style='font-size:16px;color:#000'></i></a> 
+                <a href="#"><i class='fa fa-bell' style='font-size:16px;color:#000'></i></a>
+                <a href="#"><i class='fa fa-headphones' style='font-size:16px;color: #000;'></i></a> 
+            </div>
+            <div class="vl2"></div>
+            <div class="user">
+                <a href="#"><i class='fa fa-user-circle' style='font-size:30px;color:#000'></i></a> 
+            </div> 
+        </div>
+    </header>
+
+    <!-- image grid -->
+
+    <div id="grid-container">
+        <div  id="main-image"> <img class="image1" src="./../img/511.jpg"/>
+        </div>
+            <div class="grid-cell" id="second">
+                <ul class="image-list">
+                    <li><img class="image" src="./../img/51.jpg"/></li>
+                    <li><img class="image" src="./../img/52.jpg"/></li>
+                </ul>
+            </div>
+    </div>
+
+
+     <!-- ====== Footer ====== -->
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h1>OtFit</h1>
+                    <p>
+                    OtFit, fit your wear with us<br />
+                    Copyright &copy; 2020 - 2021 First Boulevard. All rights reserved.
+                    </p>
+                </div>
+                <div class="footer-col-2">
+                    <h4>About Us</h4>
+                    <a href="">Project</a>
+                    <a href="">Track Record</a>
+                    <a href="">Pricing</a>
+                    <a href="">Services</a>
+                    <a href="">Professional Worker</a>
+                </div>
+                <div class="footer-col-3">
+                    <h4>Pricing</h4>
+                    <a href="">About Product</a>
+                    <a href="">Management</a>
+                </div>
+                <div class="footer-col-4">
+                    <h4>Media</h4>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Development</a>
+                    <a href="">Terms & Service</a>
+                </div>
+                <div class="footer-col-5">
+                    <h4>Contact</h4>
+                    <a href="">(077) 092 33 53</a>
+                </div>
+                <hr />
+          </div>
+          <div class="last">
+                <p  style="text-align:center">
+                By using this website, you understand the information being presented is provided for informational purposes only
+                </p>
+            </div>
+        </div>
+      </footer>
+
+
+
+
+  </body>
+</html>
